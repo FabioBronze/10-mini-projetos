@@ -1,5 +1,4 @@
-const ligar = document.querySelector("#turnOn");
-const desligar = document.querySelector("#turnOff");
+const turnOnOff = document.querySelector("#turnOnOff");
 const lamp = document.querySelector("#lamp");
 
 function isLampBroken() {
@@ -22,8 +21,17 @@ function lampBroken() {
   lamp.src = "img/quebrada.jpg";
 }
 
-ligar.addEventListener("click", turnOn);
-desligar.addEventListener("click", turnOff);
+function lampOnOff() {
+  if (turnOnOff.textContent == "Ligar") {
+    turnOn();
+    turnOnOff.textContent = 'Desligar'
+  } else {
+    turnOff();
+    turnOnOff.textContent = 'Ligar'
+  }
+}
+
+turnOnOff.addEventListener("click", lampOnOff);
 lamp.addEventListener("mouseover", turnOn);
 lamp.addEventListener("mouseleave", turnOff);
 lamp.addEventListener("dblclick", lampBroken);
