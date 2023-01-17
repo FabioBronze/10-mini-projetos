@@ -24,10 +24,10 @@ function lampBroken() {
 function lampOnOff() {
   if (turnOnOff.textContent == "Ligar") {
     turnOn();
-    turnOnOff.textContent = 'Desligar'
+    turnOnOff.textContent = "Desligar";
   } else {
     turnOff();
-    turnOnOff.textContent = 'Ligar'
+    turnOnOff.textContent = "Ligar";
   }
 }
 
