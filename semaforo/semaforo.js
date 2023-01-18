@@ -19,7 +19,7 @@ const nextIndex = () => {
 
 const changeColor = () => {
   const colors = ["red", "yellow", "green"]; // Array de cores.
-  const color = colors[colorIndex]; // Va buscar o indíce de cada cor um por um.
+  const color = colors[colorIndex]; // Vai buscar o indíce de cada cor um por um.
   turnOn[color](); // Vai buscar a cor do momento.
   nextIndex();
 };
